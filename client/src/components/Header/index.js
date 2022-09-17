@@ -23,6 +23,7 @@ const Header = () => {
               <a href="/" onClick={logout}>
                 Logout
               </a>
+              <Link to="/mycard">My Card</Link>
             </>
           ) : (
             <>

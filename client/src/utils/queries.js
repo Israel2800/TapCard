@@ -30,3 +30,33 @@ export const QUERY_ME_BASIC = gql`
     }
   }
 `;
+
+export const QUERY_CARD = gql`
+  query card($id: ID!) {
+    card(_id $id) {
+        _id
+        cardName
+        image
+        field
+        description
+        linkedIn
+        facebook
+        gitHub
+    }
+  }
+`
+
+export const QUERY_CARDS = gql`
+query cards($username: String) {
+    cards(username: $username) {
+        _id
+        cardName
+        image
+        field
+        description
+        linkedIn
+        facebook
+        gitHub
+    }
+}
+`
