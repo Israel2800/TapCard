@@ -1,0 +1,27 @@
+[
+    {
+        
+        "cardName" : "cardName1", 
+        "image" : "link",
+        "field": "fieldExample",
+        "description": "descriptionExample",
+        "linkedIn": "linkedInExample",
+        "facebook": "facebook",
+        "gitHub": "gitHubExample",
+        "username": "Molly48"
+    },
+    {
+        
+        "cardName" : "cardName2", 
+        "image" : "link2",
+        "field": "fieldExample2",
+        "description": "descriptionExample2",
+        "linkedIn": "linkedInExample2",
+        "facebook": "facebook2",
+        "gitHub": "gitHubExample2",
+        "username": "Molly48"
+
+    }
+    
+    
+]
