@@ -33,7 +33,7 @@ export const QUERY_ME_BASIC = gql`
 
 export const QUERY_CARD = gql`
   query card($id: ID!) {
-    card(_id $id) {
+    card(_id: $id) {
         _id
         cardName
         image
