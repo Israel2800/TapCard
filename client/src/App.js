@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 // import SingleThought from './pages/SingleThought';
-// import Profile from './pages/Profile';
+import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import MyCard from './pages/MyCard';
 
@@ -59,10 +59,10 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
-              {/* <Route 
+              <Route 
                 path="/profile" 
                 element={<Profile />} 
-              /> */}
+              />
               <Route 
                 path="*"
                 element={<NoMatch />} 

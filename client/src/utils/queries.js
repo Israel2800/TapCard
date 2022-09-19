@@ -6,6 +6,16 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      cards {
+        _id
+        cardName
+        image
+        field
+        description
+        linkedIn
+        facebook
+        gitHub
+      }
     }
   }
 `;
@@ -16,6 +26,16 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      cards {
+        _id
+        cardName
+        image
+        field
+        description
+        linkedIn
+        facebook
+        gitHub
+      }
     }
   }
 `;
@@ -42,6 +62,7 @@ export const QUERY_CARD = gql`
         linkedIn
         facebook
         gitHub
+        username
     }
   }
 `
@@ -57,6 +78,7 @@ query cards($username: String) {
         linkedIn
         facebook
         gitHub
+        username
     }
 }
 `
