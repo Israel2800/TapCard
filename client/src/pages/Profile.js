@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-
+import SingleCardList from '../components/SingleCardList';
 import CardForm from '../components/CardForm';
 import CardList from '../components/CardList';
 
@@ -51,7 +51,7 @@ const Profile = (props) => {
     <div>
       <div className="flex-row mb-3">
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing {userParam ? `${user.username}'s` : 'your'} profile
         </h2>
 
         {/* {userParam && (
@@ -63,7 +63,7 @@ const Profile = (props) => {
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
-          <CardList
+          <SingleCardList
             cards={user.cards}
             title={`${user.username}'s card!`}
           />
