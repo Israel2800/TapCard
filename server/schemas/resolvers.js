@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User, Card } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -8,7 +8,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
-          // .populate('thoughts')
+          .populate('cards')
           // .populate('friends');
 
         return userData;
@@ -19,22 +19,23 @@ const resolvers = {
     users: async () => {
       return User.find()
         .select('-__v -password')
-        // .populate('thoughts')
+        .populate('cards')
         // .populate('friends');
     },
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
         // .populate('friends')
-        // .populate('thoughts');
+        .populate('cards');
+    },
+    
+    cards: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Card.find(params).sort({ createdAt: -1 });
+    },
+    card: async (parent, { _id }) => {
+      return Card.findOne({ _id });
     }
-    // thoughts: async (parent, { username }) => {
-    //   const params = username ? { username } : {};
-    //   return Thought.find(params).sort({ createdAt: -1 });
-    // },
-    // thought: async (parent, { _id }) => {
-    //   return Thought.findOne({ _id });
-    // }
   },
 
   Mutation: {
@@ -60,21 +61,21 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    // addThought: async (parent, args, context) => {
-    //   if (context.user) {
-    //     const thought = await Thought.create({ ...args, username: context.user.username });
+    addCard: async (parent, args, context) => {
+      if (context.user) {
+        const card = await Card.create({ ...args, username: context.user.username });
 
-    //     await User.findByIdAndUpdate(
-    //       { _id: context.user._id },
-    //       { $push: { thoughts: thought._id } },
-    //       { new: true }
-    //     );
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { cards: card._id } },
+          { new: true }
+        );
 
-    //     return thought;
-    //   }
+        return card;
+      }
 
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+      throw new AuthenticationError('You need to be logged in!');
+    },
     // addReaction: async (parent, { thoughtId, reactionBody }, context) => {
     //   if (context.user) {
     //     const updatedThought = await Thought.findOneAndUpdate(

@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    cards: [Card]
   }
 
   type Auth {
@@ -16,13 +17,26 @@ const typeDefs = gql`
     me: User
     users: [User]
     user(username: String!): User
-
+    cards(username: String): [Card]
+    card(_id: ID!): Card
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    addFriend(friendId: ID!): User
+    addCard(cardName: String!, image: String!, field: String!, description: String!, linkedIn: String!, facebook: String!, gitHub: String!): Card
+  }
+
+  type Card {
+    _id: ID
+    cardName: String
+    image: String
+    field: String
+    description: String
+    linkedIn: String
+    facebook: String
+    gitHub: String
+    username: String
   }
 `;
 

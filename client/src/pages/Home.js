@@ -1,10 +1,15 @@
 import React from 'react';
-
+import CardList from '../components/CardList';
 import Auth from '../utils/auth';
+import { useQuery } from '@apollo/client';
+
+import { QUERY_CARDS, QUERY_ME_BASIC } from '../utils/queries';
 
 const Home = () => {
-//   const { loading, data } = useQuery(QUERY_THOUGHTS);
-//   const { data: userData } = useQuery(QUERY_ME_BASIC);
+  const { loading, data } = useQuery(QUERY_CARDS);
+  const { data: userData } = useQuery(QUERY_ME_BASIC);
+  const cards = data?.cards || [];
+
 
 const loggedIn = Auth.loggedIn();
 // const loggedOut = Auth.logout();
@@ -21,16 +26,16 @@ const loggedIn = Auth.loggedIn();
                 This is the Tap Car Home page, we are still working on this, don't design until functionality is done, thanks!
             </div>
             )}
-            {/* <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+            <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
             {loading ? (
                 <div>Loading...</div>
             ) : (
-                <ThoughtList
-                thoughts={thoughts}
-                title="Some Feed for Thought(s)..."
+                <CardList
+                cards={cards}
+                title="Some Feed for Card(s)..."
                 />
             )}
-            </div> */}
+            </div>
             {loggedIn ? (
             <div className="col-12 col-lg-3 mb-3">
                 {/* <FriendList

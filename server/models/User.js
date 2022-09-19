@@ -19,13 +19,13 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 5
-    }
-    // thoughts: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Thought'
-    //   }
-    // ],
+    },
+    cards: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Card'
+      }
+    ]
     // friends: [
     //   {
     //     type: Schema.Types.ObjectId,

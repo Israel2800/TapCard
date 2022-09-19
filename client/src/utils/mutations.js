@@ -23,3 +23,19 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_CARD = gql`
+  mutation addCard($cardName: String!, $image: String!, $field: String!, $description: String!, $linkedIn: String!, $facebook: String!, $gitHub: String!) {
+    addCard(cardName: $cardName, image: $image, field: $field, description: $description, linkedIn: $linkedIn, facebook: $facebook, gitHub: $gitHub) {
+        _id
+        cardName
+        image
+        field
+        description
+        linkedIn
+        facebook
+        gitHub
+        username
+    }
+  }
+`
