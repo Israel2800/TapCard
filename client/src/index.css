@@ -18,6 +18,17 @@
   box-sizing: border-box;
 }
 
+.bc-image {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* transition: all 500ms ease; */
+
+}
+
 html,
 body {
   min-height: 100%;
@@ -32,6 +43,7 @@ body {
   font-size: 20px;
   color: var(--dark);
   background-color: #f3fffee1;
+
 }
 
 h1,
