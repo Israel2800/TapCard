@@ -10,7 +10,7 @@ const Start = () => {
         navigate('/signup');
       };
     return (
-      <main>
+      <main className='bc-image'>
         <div className="col-12 mb-3">
 
             <button onClick={navigateToHome} className="btn col-12 col-md-3" type="submit">
