@@ -19,7 +19,7 @@ const Profile = (props) => {
 
   const user = data?.me || data?.user || {};
 
-  // navigate to personal profile page if username is yours
+  // navigate to personal card form page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/profile" />;
   }
