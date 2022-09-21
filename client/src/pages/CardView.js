@@ -1,9 +1,9 @@
+// This is the Card of each user when we click one in the main page
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
-// import ReactionList from '../components/ReactionList';
-// import ReactionForm from '../components/ReactionForm';
-
+import CommentForm from '../components/CommentForm';
+import CommentList from '../components/CommentList';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../utils/queries';
@@ -39,6 +39,11 @@ const CardView = (props) => {
           <p>{card.gitHub}</p>        
         </div>
       </div>
+      {card.commentCount > 0 && (
+        <CommentList comments={card.comments} />
+      )}
+
+      {Auth.loggedIn() && <CommentForm cardId={card._id} />}
 
       {/* {thought.reactionCount > 0 && (
         <ReactionList reactions={thought.reactions} />

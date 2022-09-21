@@ -8,7 +8,13 @@
         "linkedIn": "linkedInExample",
         "facebook": "facebook",
         "gitHub": "gitHubExample",
-        "username": "Molly48"
+        "username": "Israel12",
+        "comments" : [ 
+            {
+                "commentBody" : "non exercitationem consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+                "username" : "Tyree17"
+            } 
+        ]
     },
     {
         
@@ -19,7 +25,13 @@
         "linkedIn": "linkedInExample2",
         "facebook": "facebook2",
         "gitHub": "gitHubExample2",
-        "username": "Molly48"
+        "username": "Tyree17",
+        "comments" : [ 
+            {
+                "commentBody" : "non exercitationem consequatur temporibus quia dicta id earum molestias voluptatibus et ut quia officiis dignissimos ex maxime sit voluptatem", 
+                "username" : "Annabelle79"
+            } 
+        ]
 
     }
     

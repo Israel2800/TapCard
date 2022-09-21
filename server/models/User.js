@@ -26,12 +26,6 @@ const userSchema = new Schema(
         ref: 'Card'
       }
     ]
-    // friends: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User'
-    //   }
-    // ]
   },
   {
     toJSON: {

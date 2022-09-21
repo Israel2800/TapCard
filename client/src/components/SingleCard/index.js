@@ -1,5 +1,10 @@
+// This is the Me tab
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentForm from '../CommentForm';
+import CommentList from '../CommentList';
+import Auth from '../../utils/auth';
 
 const SingleCard = ({ cards, title }) => {
   if (!cards.length) {
@@ -22,22 +27,25 @@ const SingleCard = ({ cards, title }) => {
               </Link>{' '}
             </p>
             <div className="card-body">
-              <Link to={`/profile/${card.username}`}>
-                <p>{card.cardName}</p>
-                <p>{card.image}</p>
-                <p>{card.field}</p>
-                <p>{card.description}</p>
-                <p>{card.linkedIn}</p>
-                <p>{card.facebook}</p>
-                <p>{card.gitHub}</p>
+              <p>{card.cardName}</p>
+              <p>{card.image}</p>
+              <p>{card.field}</p>
+              <p>{card.description}</p>
+              <p>{card.linkedIn}</p>
+              <p>{card.facebook}</p>
+              <p>{card.gitHub}</p>  
+               
 
 
-                {/* <p className="mb-0">
-                  Reactions: {card.reactionCount} || Click to{' '}
-                  {card.reactionCount ? 'see' : 'start'} the discussion!
-                </p> */}
-              </Link>
+         
             </div>
+           
+            {card.commentCount > 0 && (
+              <CommentList comments={card.comments} />
+            )}
+
+            {Auth.loggedIn() && <CommentForm cardId={card._id} />}
+
           </div>
         ))}
     </div>
