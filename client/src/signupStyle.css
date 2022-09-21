@@ -161,7 +161,7 @@ nav a:hover {
 }
 
 .signHeader {
-  color: var(--secondary);
+  color: rgb(0, 78, 247);
   margin: 0;
   background-color: var(--dark);
   padding: 0.625rem;
@@ -171,7 +171,7 @@ nav a:hover {
 .signBody {
   padding: 2.5%;
   font-size: 1.4rem;
-  background-image: url(./images/signupbg.jpg);
+  
 }
 
 /* FORM */
