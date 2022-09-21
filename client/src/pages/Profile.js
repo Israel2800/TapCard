@@ -1,3 +1,5 @@
+// This is were we call our 'Single Card'
+
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import SingleCard from '../components/SingleCard';

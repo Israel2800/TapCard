@@ -1,3 +1,5 @@
+// This are the cards that we display in the home page
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 

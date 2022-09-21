@@ -1,3 +1,5 @@
+// This calls the CardForm to submit the user's information
+
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 

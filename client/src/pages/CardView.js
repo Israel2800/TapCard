@@ -1,3 +1,5 @@
+// This is the Card of each user when we click one in the main page
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
