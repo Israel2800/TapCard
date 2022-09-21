@@ -15,6 +15,7 @@ export const QUERY_USER = gql`
         linkedIn
         facebook
         gitHub
+        commentCount
       }
     }
   }
@@ -35,6 +36,13 @@ export const QUERY_ME = gql`
         linkedIn
         facebook
         gitHub
+        commentCount
+        comments {
+          _id
+          createdAt
+          commentBody
+          username
+        }
       }
     }
   }
@@ -63,6 +71,13 @@ export const QUERY_CARD = gql`
         facebook
         gitHub
         username
+        commentCount
+        comments {
+          _id
+          createdAt
+          commentBody
+          username
+        }
     }
   }
 `
@@ -79,6 +94,13 @@ query cards($username: String) {
         facebook
         gitHub
         username
+        commentCount
+        comments {
+          _id
+          createdAt
+          commentBody
+          username
+        }
     }
 }
 `

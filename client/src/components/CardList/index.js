@@ -34,6 +34,12 @@ const CardList = ({ cards, title }) => {
 
               {/* </Link> */}
             </div>
+            {/* {card.commentCount > 0 && (
+              <CommentList comments={card.comments} />
+            )}
+
+            {Auth.loggedIn() && <CommentForm cardId={card._id} />} */}
+
           </div>
         ))}
     </div>

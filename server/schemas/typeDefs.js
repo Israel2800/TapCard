@@ -25,6 +25,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addCard(cardName: String!, image: String!, field: String!, description: String!, linkedIn: String!, facebook: String!, gitHub: String!): Card
+    addComment(cardId: ID!, commentBody: String!): Card
   }
 
   type Card {
@@ -37,7 +38,18 @@ const typeDefs = gql`
     facebook: String
     gitHub: String
     username: String
+    comments: [Comment]
+    commentCount: Int
+
   }
+  
+  type Comment {
+    _id: ID
+    commentBody: String
+    createdAt: String
+    username: String
+  }
+
 `;
 
 module.exports = typeDefs;

@@ -2,6 +2,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CommentForm from '../CommentForm';
+import CommentList from '../CommentList';
+import Auth from '../../utils/auth';
 
 const SingleCard = ({ cards, title }) => {
   if (!cards.length) {
@@ -34,11 +37,15 @@ const SingleCard = ({ cards, title }) => {
                
 
 
-                {/* <p className="mb-0">
-                  Reactions: {card.reactionCount} || Click to{' '}
-                  {card.reactionCount ? 'see' : 'start'} the discussion!
-                </p> */}
+         
             </div>
+           
+            {card.commentCount > 0 && (
+              <CommentList comments={card.comments} />
+            )}
+
+            {Auth.loggedIn() && <CommentForm cardId={card._id} />}
+
           </div>
         ))}
     </div>

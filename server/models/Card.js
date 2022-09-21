@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
-// const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
+const commentSchema = require('./Comment');
 
 const cardSchema = new Schema(
   {
@@ -38,6 +37,7 @@ const cardSchema = new Schema(
         type: String,
         required: true
     },
+    comments: [commentSchema]
   },
   {
     toJSON: {
@@ -46,9 +46,9 @@ const cardSchema = new Schema(
   }
 );
 
-// thoughtSchema.virtual('reactionCount').get(function() {
-//   return this.reactions.length;
-// });
+cardSchema.virtual('commentCount').get(function() {
+  return this.comments.length;
+});
 
 const Card = model('Card', cardSchema);
 
