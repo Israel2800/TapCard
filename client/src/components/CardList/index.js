@@ -14,7 +14,7 @@ const CardList = ({ cards, title }) => {
           <div key={card._id} className="card mb-3">
             <p className="card-header">
               <Link
-                to={`/profile/${card.username}`}
+                to={`/card/${card._id}`}
                 style={{ fontWeight: 700 }}
                 className="text-light"
               >
@@ -23,18 +23,14 @@ const CardList = ({ cards, title }) => {
               {/* thought on {card.createdAt} */}
             </p>
             <div className="card-body">
-              <Link to={`/profile/${card.username}`}>
+              {/* <Link to={`/card/${card._id}`}> */}
                 <p>{card.image}</p>
                 <p>{card.linkedIn}</p>
                 <p>{card.facebook}</p>
                 <p>{card.gitHub}</p>
 
 
-                {/* <p className="mb-0">
-                  Reactions: {card.reactionCount} || Click to{' '}
-                  {card.reactionCount ? 'see' : 'start'} the discussion!
-                </p> */}
-              </Link>
+              {/* </Link> */}
             </div>
           </div>
         ))}

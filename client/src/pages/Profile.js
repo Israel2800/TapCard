@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import SingleCardList from '../components/SingleCardList';
+import SingleCard from '../components/SingleCard';
 import CardForm from '../components/CardForm';
 import CardList from '../components/CardList';
 
@@ -63,7 +63,7 @@ const Profile = (props) => {
 
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
-          <SingleCardList
+          <SingleCard
             cards={user.cards}
             title={`${user.username}'s card!`}
           />
