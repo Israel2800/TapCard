@@ -18,7 +18,7 @@ import NoMatch from './pages/NoMatch';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import MyCard from './pages/MyCard';
-
+import CardView from './pages/CardView';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
