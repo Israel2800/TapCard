@@ -144,7 +144,7 @@ nav a:hover {
   margin: 5px 0;
   border-radius: var(--border-radius);
   border: none;
-  color: rgb(48, 0, 219);
+  color: rgb(39, 156, 252);
   outline: none;
   background-color: black;
   transition: all 0.5s;
@@ -174,22 +174,22 @@ nav a:hover {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
-  backgroundColor: 'rgba(52, 52, 52, 0.8)';
+  background-color: 'rgba(52, 52, 52, 0.8)';
   color: var(--dark);
 }
 
 .signHeader {
   color: rgb(0, 78, 247);
   margin: 0;
-  background-color: var(--dark);
+  background-color: 'rgba(52, 52, 52, 0.8)';
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  border-color: #00b3ff;
 }
 
 .signBody {
   padding: 2.5%;
-  font-size: 1.4rem;
-  
+  font-size: 1.4rem; 
 }
 
 /* FORM */
@@ -211,6 +211,7 @@ nav a:hover {
   font-size: 1.2rem;
   border: 2px solid var(--dark);
   border-radius: var(--border-radius);
+  border-color: #003cff;
 }
 
 [type='radio']:checked,

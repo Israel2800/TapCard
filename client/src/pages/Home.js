@@ -16,7 +16,7 @@ const loggedIn = Auth.loggedIn();
 
 
   return (
-    <main>
+    <div className='home-bg'>
         <div className="col-12 mb-3">
             This is the Tap Car Home page, we are still working on this, don't design until functionality is done, thanks!
         </div>
@@ -46,7 +46,7 @@ const loggedIn = Auth.loggedIn();
             </div>
             ) : null}
         </div>
-    </main>
+    </div>
   );
 };
 

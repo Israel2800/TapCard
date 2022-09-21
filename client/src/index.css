@@ -1,10 +1,10 @@
 :root {
-  --primary: #497573;
-  --secondary: #1f3431;
+  --primary: #05cdfa;
+  --secondary: #f9f9fcde;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
+  --light: #575656;
+  --dark: #303030;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -114,8 +114,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color:gray;
+  background-color: black;
 }
 
 .page-title {
@@ -141,8 +141,8 @@ nav a:hover {
 
 .btn:hover,
 .pill:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color: rgb(190, 187, 187);
+  background-color: rgb(94, 94, 94);
 }
 
 .btn:hover a,
@@ -166,7 +166,7 @@ nav a:hover {
 .card-header {
   color: var(--secondary);
   margin: 0;
-  background-color: var(--dark);
+  background-color: rgb(10, 116, 254);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
