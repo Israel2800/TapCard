@@ -1,3 +1,21 @@
+html {
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.home-bg {
+background: url(./images/home-background.mp4) no-repeat center center fixed;
+}
+.signup-bg {
+background: url(./images/signupbg.jpg) no-repeat center center fixed;
+}
+.login-bg {
+background: url() no-repeat center center fixed;
+}
+
+
 .signDiv {
   --primary: #551ce7;
   --secondary: #297eff;
