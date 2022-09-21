@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
+import '../../src/signupStyle.css'
 import Auth from '../utils/auth';
 
 const Signup = () => {
@@ -38,11 +38,12 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    
+    <div className="signDiv flex-row justify-center mb-4">
       <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header">Sign Up</h4>
-          <div className="card-body">
+        <div className="signCard">
+          <h4 className="signHeader">Sign Up</h4>
+          <div className="signBody">
             <form onSubmit={handleFormSubmit}>
               <input
                 className="form-input"
@@ -71,16 +72,16 @@ const Signup = () => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className="btn d-block w-100" type="submit">
+              <button className="sigbtn d-block w-100" type="submit">
                 Submit
               </button>
             </form>
 
-            {error && <div>Signup failed</div>}
+            {error && <div className='errtxt'>Signup failed!</div>}
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
+           </div>
+       </div>
   );
 };
 
