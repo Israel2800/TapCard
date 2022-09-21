@@ -11,42 +11,42 @@ function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [currentProduct, setCurrentProduct] = useState({});
+  const [currentCard, setCurrentCard] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  const { products } = state;
+  const { cards } = state;
 
   useEffect(() => {
-    if (products.length) {
-      setCurrentProduct(products.find((product) => product._id === id));
+    if (cards.length) {
+      setCurrentCard(cards.find((card) => card._id === id));
     } else if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
-        products: data.products,
+        cards: data.cards,
       });
     }
-  }, [products, data, dispatch, id]);
+  }, [cards, data, dispatch, id]);
 
   return (
     <>
-      {currentProduct ? (
+      {currentCard ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+          <Link to="/">← Back to Cards</Link>
 
-          <h2>{currentProduct.name}</h2>
+          <h2>{currentCard.name}</h2>
 
-          <p>{currentProduct.description}</p>
+          <p>{currentCard.description}</p>
 
           <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
+            <strong>linkedIn:</strong>${currentCard.linkedIn}{' '}
             <button>Add to Cart</button>
             <button>Remove from Cart</button>
           </p>
 
           <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
+            src={`/images/${currentCard.image}`}
+            alt={currentCard.name}
           />
         </div>
       ) : null}

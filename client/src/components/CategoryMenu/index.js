@@ -7,33 +7,33 @@ import {
 } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 
-function CategoryMenu() {
+function MajorMenu() {
   const [state, dispatch] = useStoreContext();
 
-  const { categories } = state;
+  const { majors } = state;
 
-  const { data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const { data: majorData } = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
-    if (categoryData) {
+    if (majorData) {
       dispatch({
         type: UPDATE_CATEGORIES,
-        categories: categoryData.categories,
+        majors: majorData.majors,
       });
     }
-  }, [categoryData, dispatch]);
+  }, [majorData, dispatch]);
 
   const handleClick = (id) => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
-      currentCategory: id,
+      currentMajor: id,
     });
   };
 
   return (
     <div>
-      <h2>Choose a Category:</h2>
-      {categories.map((item) => (
+      <h2>Choose a Major:</h2>
+      {majors.map((item) => (
         <button
           key={item._id}
           onClick={() => {
@@ -47,4 +47,4 @@ function CategoryMenu() {
   );
 }
 
-export default CategoryMenu;
+export default MajorMenu;

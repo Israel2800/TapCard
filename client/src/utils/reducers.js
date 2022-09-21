@@ -10,19 +10,19 @@ export const reducer = (state, action) => {
     case UPDATE_PRODUCTS:
       return {
         ...state,
-        products: [...action.products],
+        cards: [...action.cards],
       };
 
     case UPDATE_CATEGORIES:
       return {
         ...state,
-        categories: [...action.categories],
+        majors: [...action.majors],
       };
 
     case UPDATE_CURRENT_CATEGORY:
       return {
         ...state,
-        currentCategory: action.currentCategory
+        currentMajor: action.currentMajor
       }
 
     default:
@@ -30,6 +30,6 @@ export const reducer = (state, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
+export function useCardReducer(initialState) {
   return useReducer(reducer, initialState)
 }
