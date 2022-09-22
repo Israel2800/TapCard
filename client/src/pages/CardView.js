@@ -8,6 +8,10 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../utils/queries';
 
+import test from '../images/heros/artheader.jpg'
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
+
 const CardView = (props) => {
   const { id: cardID } = useParams();
 
@@ -26,24 +30,36 @@ const CardView = (props) => {
       <div className="">
         <p className="">
           <span style={{ fontWeight: 700 }} className="">
-            {card.username}
+            <h1>{card.username}</h1>
           </span>{' '}
         </p>
         <div className="card-body">
           
           <div className='imageProfile'>
-            <p>{card.image}</p>
+            <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
           </div>
-          <div className='major'>{card.field}</div>
-          
-          <div>
-          {card.description}
+          <div className='majorText'><h1>Major: 
+              {card.field}</h1> 
+            
           </div>
-          <p>{card.linkedIn}</p>
           
-          <p>{card.facebook}</p>
+          <div className='userDescription'>
+          My description:<p>{card.description}</p>
+          </div>
           
-          <p>{card.gitHub}</p>        
+          <div className='icons'>
+            <a href={card.linkedIn} alt="linkedInImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+            <a href={card.gitHub} alt="gitHubImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+            <a href={card.facebook} alt="facebookImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+          </div>
+
+               
         </div>
       </div>
       {card.commentCount > 0 && (

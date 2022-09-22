@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-secondary mb-4 py-2 flex-row align-center">
+    <header className="bg-secondary mb-4 py-2 flex-row align-center headerSticky">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/home">
           <h1>Tap card!</h1>

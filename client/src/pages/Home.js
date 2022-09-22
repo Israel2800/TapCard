@@ -17,22 +17,15 @@ const loggedIn = Auth.loggedIn();
 
   return (
     <main>
-        <div className="col-12 mb-3">
-            This is the Tap Car Home page, we are still working on this, don't design until functionality is done, thanks!
-        </div>
-        <div className="flex-row justify-space-between">
-            {loggedIn && (
-            <div className="col-12 mb-3">
-                This is the Tap Car Home page, we are still working on this, don't design until functionality is done, thanks!
-            </div>
-            )}
+
+        <div className=""><h1>Tap your next connection!</h1>
+
             <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
             {loading ? (
                 <div>Loading...</div>
             ) : (
                 <CardList
                 cards={cards}
-                title="Some Feed for Card(s)..."
                 />
             )}
             </div>
