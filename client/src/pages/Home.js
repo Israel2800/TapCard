@@ -2,6 +2,7 @@ import React from 'react';
 import CardList from '../components/CardList';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
+import homevid from "../images/home-background.mp4"
 
 import { QUERY_CARDS, QUERY_ME_BASIC } from '../utils/queries';
 
@@ -16,7 +17,22 @@ const loggedIn = Auth.loggedIn();
 
 
   return (
-    <main>
+      <div>
+          <video autoPlay loop muted
+              style={
+                  {
+                      position: "absolute",
+                      width: "100%",
+                      left: "50%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transform: "translate(-50%, -50%)",
+                      zIndex:"-1"
+                  }
+              }
+              >
+              <source src={homevid} type="video/mp4"/>
+          </video>
         <div className="col-12 mb-3">
             This is the Tap Car Home page, we are still working on this, don't design until functionality is done, thanks!
         </div>
@@ -46,7 +62,7 @@ const loggedIn = Auth.loggedIn();
             </div>
             ) : null}
         </div>
-    </main>
+    </div>
   );
 };
 
