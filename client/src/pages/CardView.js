@@ -8,7 +8,10 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../utils/queries';
 
-import test from '../images/heros/artheader.jpg'
+import linkedIn from '../images/socialMediaButtons/linkedin.png'
+import facebook from '../images/socialMediaButtons/fb.png'
+import gitHub from '../images/socialMediaButtons/github.png'
+
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 
@@ -49,13 +52,13 @@ const CardView = (props) => {
           
           <div className='icons'>
             <a href={card.linkedIn} alt="linkedInImage" target="_blank" rel="noreferrer">
-              <img className='icon-size' src={test} alt="example" />
+              <img className='icon-size' src={linkedIn} alt="example" />
             </a>
             <a href={card.gitHub} alt="gitHubImage" target="_blank" rel="noreferrer">
-              <img className='icon-size' src={test} alt="example" />
+              <img className='icon-size' src={gitHub} alt="example" />
             </a>
             <a href={card.facebook} alt="facebookImage" target="_blank" rel="noreferrer">
-              <img className='icon-size' src={test} alt="example" />
+              <img className='icon-size' src={facebook} alt="example" />
             </a>
           </div>
 
