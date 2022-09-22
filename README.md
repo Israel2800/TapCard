@@ -22,7 +22,7 @@
 ![Screenshot of the TapCard main page.](client/src/images/screenshot-1.png)
 
 
-- [The Link of the deployed application.](https://tap-card-everyone.herokuapp.com/home)
+- [The Link of the deployed application.](https://tap-card-everyone.herokuapp.com/)
 
 - [The Link of the GitHub repository.](https://github.com/Israel2800/MERN-Project-3)
 
