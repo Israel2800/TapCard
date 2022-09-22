@@ -50,7 +50,7 @@ const Profile = (props) => {
 //   };
 
   return (
-    <div>
+    <div className='profile'>
       <div className="flex-row mb-3">
         
 
