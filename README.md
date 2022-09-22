@@ -1,8 +1,11 @@
 # Tap Card!
 
-![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
-
-![Img for the application](./client/src/images/1.png )
+[![github-follow](https://img.shields.io/github/followers/israel2800?label=Follow&logoColor=blue&style=social)](https://github.com/israel2800)
+[![project-languages-used](https://img.shields.io/github/languages/count/Israel2800/MERN-Project-3?color=important)](https://github.com/Israel2800/MERN-Project-3)
+[![project-top-language](https://img.shields.io/github/languages/top/Israel2800/MERN-Project-3?color=orange)](https://github.com/Israel2800/MERN-Project-3)
+[![node.js](https://img.shields.io/node/v/c?color=orange)](https://nodejs.org/en/)
+[![npm](https://img.shields.io/npm/v/npm?color=orange&logo=npm)](https://www.npmjs.com/package/inquirer)
+[![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Table of Contents
 
