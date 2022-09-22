@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Card, Major } = require('../models');
+const { User, Card, Major, Comment } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -87,7 +87,7 @@ const resolvers = {
       if (context.user) {
         return await Card.findOneAndUpdate(context.user._id, args, { new: true });
       } 
-      
+
       throw new AuthenticationError('You need to be logged in!');
     },
     
