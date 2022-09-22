@@ -19,7 +19,7 @@
 - [Technologies](#technologies)
 
 ## 💡💡💡Finished work
-![Screenshot of the TapCard main page.](client/src/images/screenshot-1.png)
+![Screenshot of the TapCard main page.](client/src/images/screenshot1.png)
 
 
 - [The Link of the deployed application.](https://tap-card-everyone.herokuapp.com/)
