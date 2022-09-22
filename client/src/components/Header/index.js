@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import image from '../../images/tapcardsilver.png';
+import homevid from "../../images/home-background.mp4"
 
 const Header = () => {
   const logout = event => {
