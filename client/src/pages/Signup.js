@@ -41,7 +41,7 @@ const Signup = () => {
 
   return (
     
-    <div className="signDiv flex-row justify-center mb-4">
+    <div className="signin flex-row justify-center mb-4">
       <div className="col-12 col-md-6">
         <div className="signCard">
           <h4 className="signHeader">Sign Up</h4>
