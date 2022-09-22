@@ -21,6 +21,8 @@ const Profile = (props) => {
 
   const user = data?.me || data?.user || {};
 
+  
+
   // navigate to personal card form page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/profile" />;
@@ -52,8 +54,6 @@ const Profile = (props) => {
   return (
     <div className='profile'>
       <div className="flex-row mb-3">
-        
-
         {/* {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
             Add Friend
