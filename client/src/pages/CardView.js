@@ -8,9 +8,9 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../utils/queries';
 
-import linkedIn from '../images/socialMediaButtons/linkedin.png'
-import facebook from '../images/socialMediaButtons/fb.png'
-import gitHub from '../images/socialMediaButtons/github.png'
+import linkedIn from '../images/socialMediaButtons/linkedinhover.png'
+import facebook from '../images/socialMediaButtons/fbhover.png'
+import gitHub from '../images/socialMediaButtons/githover.png'
 
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 

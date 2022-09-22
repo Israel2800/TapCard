@@ -126,7 +126,7 @@ const CardForm = () => {
   };
 
   return (
-    <div>
+    <div className='wholeForm'>
       <p
         className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
       >
