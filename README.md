@@ -99,3 +99,7 @@ This application is covered by the MIT license.
 
 - Mongoose
 
+<hr>
+<p align='center'><i>
+This README was generated with ❤️ by Group 7
+</i></p>
