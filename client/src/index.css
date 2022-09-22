@@ -29,6 +29,26 @@
 
 }
 
+.imageProfile {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  /* margin: 20px; */
+  position: absolute;
+  top: 230px;
+
+
+}
+
+.major {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  position: absolute;
+  right: 10%;
+  top: 230px;
+}
+
 html,
 body {
   min-height: 100%;

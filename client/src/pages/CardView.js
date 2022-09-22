@@ -23,19 +23,26 @@ const CardView = (props) => {
 
   return (
     <div>
-      <div className="card mb-3">
-        <p className="card-header">
-          <span style={{ fontWeight: 700 }} className="text-light">
+      <div className="">
+        <p className="">
+          <span style={{ fontWeight: 700 }} className="">
             {card.username}
           </span>{' '}
         </p>
         <div className="card-body">
-          <p>{card.cardName}</p>
-          <p>{card.image}</p>
-          <p>{card.field}</p>
-          <p>{card.description}</p>
+          
+          <div className='imageProfile'>
+            <p>{card.image}</p>
+          </div>
+          <div className='major'>{card.field}</div>
+          
+          <div>
+          {card.description}
+          </div>
           <p>{card.linkedIn}</p>
+          
           <p>{card.facebook}</p>
+          
           <p>{card.gitHub}</p>        
         </div>
       </div>

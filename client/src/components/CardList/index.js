@@ -28,8 +28,8 @@ const CardList = ({ cards, title }) => {
               {/* <Link to={`/card/${card._id}`}> */}
                 <p>{card.image}</p>
                 <p>{card.linkedIn}</p>
-                <p>{card.facebook}</p>
-                <p>{card.gitHub}</p>
+                {card.facebook}
+                {card.gitHub}
 
 
               {/* </Link> */}
