@@ -1,4 +1,4 @@
-# Tap Card
+# Tap Card!
 
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
