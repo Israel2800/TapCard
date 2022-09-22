@@ -222,7 +222,7 @@ nav a:hover {
 }
 
 .loginform-input {
-  width: 30%;
+  width: 100%;
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
@@ -232,7 +232,7 @@ nav a:hover {
 }
 
 .form-input {
-  width: 30%;
+  width: 100%;
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
