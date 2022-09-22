@@ -18,8 +18,10 @@ import NoMatch from './pages/NoMatch';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import MyCard from './pages/MyCard';
-
 import CardView from './pages/CardView';
+import homevid from "./images/home-background.mp4"
+import useSound from 'use-sound';
+import submitsound from './audio/mouseoversub.mp3'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -47,7 +49,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container">
+          <div>
             <Routes>
               <Route 
                 path="/" 

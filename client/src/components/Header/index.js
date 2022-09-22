@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Auth from '../../utils/auth';
+import image from '../../images/tapcardsilver.png';
+import '../../index.css'
 
 const Header = () => {
   const logout = event => {
@@ -10,13 +11,14 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-secondary mb-4 py-2 flex-row align-center headerSticky">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+
+    <header className="bg-secondary mb-5 py-2 flex-row align-center">
+      <div className="flex-row justify-space-between-lg justify-center align-center ">
         <Link to="/home">
-          <h1>Tap card!</h1>
+          <h1><img alt='a logo for buttheads' src={image} height={100} width={400} /></h1>
         </Link>
 
-        <nav className="text-center">
+        <nav className="text-center mb-5">
           {Auth.loggedIn() ? (
             <>
               <Link to="/mycard">My Card</Link>

@@ -15,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "ffmpeg": "^0.0.4",
+    "use-sound": "^4.0.1"
   }
 }

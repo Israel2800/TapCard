@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../login.css";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -39,15 +40,16 @@ const Login = (props) => {
     });
   };
 
+
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header">Login</h4>
-          <div className="card-body">
+    <div className="login">
+      <div className="col-6 col-md-3">
+        <div className="loginCard">
+          <h4 className="loginHeader">Login</h4>
+          <div className="loginBody">
             <form onSubmit={handleFormSubmit}>
               <input
-                className="form-input"
+                className="loginform-input"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -56,7 +58,7 @@ const Login = (props) => {
                 onChange={handleChange}
               />
               <input
-                className="form-input"
+                className="loginform-input"
                 placeholder="******"
                 name="password"
                 type="password"
@@ -64,16 +66,16 @@ const Login = (props) => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className="btn d-block w-100" type="submit">
+              <button className="logbtn d-block w-30" type="submit">
                 Submit
               </button>
             </form>
 
-            {error && <div>Login failed</div>}
+            {error && <div className='errtxt'>Signup failed!</div>}
           </div>
-        </div>
+          </div>
       </div>
-    </main>
+    </div>
   );
 };
 
