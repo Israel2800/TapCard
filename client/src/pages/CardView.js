@@ -8,6 +8,10 @@ import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import { QUERY_CARD } from '../utils/queries';
 
+import test from '../images/heros/artheader.jpg'
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
+
 const CardView = (props) => {
   const { id: cardID } = useParams();
 
@@ -23,20 +27,39 @@ const CardView = (props) => {
 
   return (
     <div>
-      <div className="card mb-3">
-        <p className="card-header">
-          <span style={{ fontWeight: 700 }} className="text-light">
-            {card.username}
+      <div className="">
+        <p className="">
+          <span style={{ fontWeight: 700 }} className="">
+            <h1>{card.username}</h1>
           </span>{' '}
         </p>
         <div className="card-body">
-          <p>{card.cardName}</p>
-          <p>{card.image}</p>
-          <p>{card.field}</p>
-          <p>{card.description}</p>
-          <p>{card.linkedIn}</p>
-          <p>{card.facebook}</p>
-          <p>{card.gitHub}</p>        
+          
+          <div className='imageProfile'>
+            <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
+          </div>
+          <div className='majorText'><h1>Major: 
+              {card.field}</h1> 
+            
+          </div>
+          
+          <div className='userDescription'>
+          My description:<p>{card.description}</p>
+          </div>
+          
+          <div className='icons'>
+            <a href={card.linkedIn} alt="linkedInImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+            <a href={card.gitHub} alt="gitHubImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+            <a href={card.facebook} alt="facebookImage" target="_blank" rel="noreferrer">
+              <img className='icon-size' src={test} alt="example" />
+            </a>
+          </div>
+
+               
         </div>
       </div>
       {card.commentCount > 0 && (
