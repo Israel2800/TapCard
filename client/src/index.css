@@ -26,23 +26,24 @@
  }
 
  .mycard {
-   background: url("./images/mycardbg.jpg"); 
-   background-size: cover;
-   min-width: auto;
-   min-height: auto;
-    background-size: "cover";
+  background: url("./images/mycardbg.jpg"); 
+  background-size: cover;
+  min-width: auto;
+  min-height: auto;
+  background-size: "cover";
   height: 100vh;
   margin-top: -70px;
   font-size:50px;
-  background-repeat:no-repeat; 
+  background-repeat:no-repeat;
+  margin-bottom: 20px; 
  }
 
  .profile {
-   background: url("./images/network.jpeg"); 
-   background-size: cover;
-   min-width: auto;
-   min-height: auto;
-    background-size: "cover";
+  background: url("./images/network.jpeg"); 
+  background-size: cover;
+  min-width: auto;
+  min-height: auto;
+  background-size: "cover";
   height: 100vh;
   margin-top: -70px;
   font-size:50px;
@@ -199,14 +200,14 @@ background: url() no-repeat center center fixed;
 /* Footer section */
 
 .footer {
-  position: fixed;
     left: 0;
     bottom: -10px;
     width: 100%;
     height: 52px;
     background-color: #1f3431;
-    color: #acb8b8;
+    color: #d8dddd;
     text-align: center;
+    margin-top: 10px;
 
 }
 
@@ -1066,7 +1067,7 @@ nav a:hover {
 }
 
 .bg-secondary {
-  background-color:rgb(232, 242, 243);
+  background-color:rgb(18, 19, 19);
 }
 
 .bg-tertiary {
