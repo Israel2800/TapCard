@@ -1,16 +1,21 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type Major {
+    _id: ID
+    name: String
+  }
+
+  type Comment {
+    _id: ID
+    commentBody: String
+    createdAt: String
+    username: String
+  }
+
   type Auth {
     token: ID!
     user: User
-  }
-
-  type User {
-    _id: ID
-    name: String
-    email: String
-    cards: [Card]
   }
 
   type Card {
@@ -26,33 +31,27 @@ const typeDefs = gql`
     major: [Major]
   }
 
-  type Major {
+  type User {
     _id: ID
     name: String
-  }
-
-  type Comment {
-    _id: ID
-    commentBody: String
-    createdAt: String
-    username: String
+    email: String
+    cards: [Card]
   }
 
   type Query {
     me: User
     users: [User] 
     user(username: String!): User
-    major: [Major]
-    comments: [Comment]
-    cards(username: String): [Card]
+    majors: [Major]
+    cards( major: ID, username: String): [Card]
     card(_id: ID!): Card
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     addCard(Name: String!, image: String!, major: String!, description: String!, linkedIn: String!, facebook: String!, gitHub: String!): Card
-    updateUser(name: String, email: String, password: String): User
-    updateCard(_id: ID!, facebook: Int!): Card
+    addComment(cardId: ID!, commentBody: String!): Card
+    updateCard(Name: String!, image: String!, major: String!, description: String!, linkedIn: String!, facebook: String!, gitHub: String!): Card
     login(email: String!, password: String!): Auth
   }
 `;

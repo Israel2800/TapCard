@@ -57,10 +57,6 @@ function App() {
                 element={<Signup />} 
               />
               <Route 
-                path="/orderHistory" 
-                element={<OrderHistory />} 
-              />
-              <Route 
                 path="/cards/:id" 
                 element={<Detail />} 
               />

@@ -4,9 +4,6 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    majors: async () => {
-      return await Major.find();
-    },
     me: async (parent, args, context) => {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
@@ -18,16 +15,29 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    cards: async (parent, { major, name }) => {
+    users: async () => {
+      return User.find()
+        .select('-__v -password')
+        .populate('cards')
+    },
+    user: async (parent, { username }) => {
+      return User.findOne({ username })
+        .select('-__v -password')
+        .populate('cards');
+    },
+    majors: async () => {
+      return await Major.find();
+    },
+    cards: async (parent, { major, username }) => {
       const params = {};
 
       if (major) {
         params.major = major;
       }
 
-      if (name) {
-        params.name = {
-          $regex: name
+      if (username) {
+        params.username = {
+          $regex: username
         };
       }
 
@@ -36,33 +46,8 @@ const resolvers = {
     card: async (parent, { _id }) => {
       return await Card.findById(_id).populate('major');
     },
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'comments.cards',
-          populate: 'major'
-        });
-
-        user.comments.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
-        return user;
-      }
-
-      throw new AuthenticationError('Not logged in');
-    },
-    comment: async (parent, { _id }, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'orders.cards',
-          populate: 'major'
-        });
-
-        return user.orders.id(_id);
-      }
-
-      throw new AuthenticationError('Not logged in');
-    }
   },
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -70,30 +55,42 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { cards }, context) => {
-      console.log(context);
+    addCard: async (parent, args, context) => {
       if (context.user) {
-        const comment = new Order({ cards });
+        const card = await Card.create({ ...args, username: context.user.username });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { cards: card._id } },
+          { new: true }
+        );
 
-        return order;
+        return card;
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError('You need to be logged in!');
     },
-    updateUser: async (parent, args, context) => {
+    addComment: async (parent, { cardId, commentBody }, context) => {
       if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+        const updatedCard = await Card.findOneAndUpdate(
+          { _id: cardId },
+          { $push: { comments: { commentBody, username: context.user.username } } },
+          { new: true, runValidators: true }
+        );
+
+        return updatedCard;
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError('You need to be logged in!');
     },
-    updateCard: async (parent, { _id, facebook }) => {
-      const decrement = Math.abs(facebook) * -1;
-
-      return await Card.findByIdAndUpdate(_id, { $inc: { facebook: decrement } }, { new: true });
+    updateCard: async (parent, args, context) => {
+      if (context.user) {
+        return await Card.findOneAndUpdate(context.user._id, args, { new: true });
+      } 
+      
+      throw new AuthenticationError('You need to be logged in!');
     },
+    
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
