@@ -46,6 +46,7 @@ const loggedIn = Auth.loggedIn();
           </div>
       
   );
+  
 };
 
 export default Home;
