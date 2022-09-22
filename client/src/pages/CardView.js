@@ -33,7 +33,7 @@ const CardView = (props) => {
       <div className="">
         <p className="">
           <span style={{ fontWeight: 700 }} className="">
-            <h1>{card.username}</h1>
+            <h1 className='userNameTitle'>{card.username}</h1>
           </span>{' '}
         </p>
         <div className="card-body">

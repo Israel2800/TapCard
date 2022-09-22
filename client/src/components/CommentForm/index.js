@@ -36,7 +36,7 @@ const CommentForm = ({ cardId }) => {
   };
 
   return (
-    <div>
+    <div className='commentForm'>
       <p
         className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
       >

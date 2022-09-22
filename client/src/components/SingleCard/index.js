@@ -30,23 +30,23 @@ const SingleCard = ({ cards, title }) => {
 
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className='userNameTitle'>{title}</h3>
       {cards &&
         cards.map(card => (
-          <div key={card._id} className="card mb-3 text-white">
-            <p className="card-header">
+          <div key={card._id} className=" mb-3 text-white">
+            <p className="">
               <Link
                 to={`/card/${card._id}`}
                 style={{ fontWeight: 700 }}
                 className="text-light"
               >
-                <div className='moveText'>{card.username}</div>
+                {card.username}
               </Link>{' '}
             </p>
-            <div className="card-body">
+            <div className="">
             <div className='imageProfile'>
-              <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
-            </div>
+            <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
+          </div>
           <div className='majorText'><h1>Major: 
               {card.field}</h1> 
             

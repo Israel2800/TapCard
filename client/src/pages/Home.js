@@ -17,9 +17,9 @@ const loggedIn = Auth.loggedIn();
 
   return (
       <div className='home'>
-        <div className="flex-row justify-space-between">
+        <div className="">
             {loggedIn && (
-            <div className="col-12 mb-3">
+            <div className="centerWord">
                 Welcome to TapCard
             </div>
             )}

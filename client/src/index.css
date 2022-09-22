@@ -100,6 +100,7 @@ background: url() no-repeat center center fixed;
 
 
 .imageProfile {
+  padding: 10px;
   width: 300px;
   height: 250px;
   display: flex;
@@ -108,16 +109,40 @@ background: url() no-repeat center center fixed;
   justify-content: center;
   border: 3px solid #dbe4ed;
   top: 30%;
-  left: 5%;
+  left: 8%;
 
 
 }
 
+.userNameTitle {
+  color: #cadbda;
+  position: absolute;
+  left: 8%;
+  top: 150px;
+
+}
+
 .imageUser {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 210px;
   align-items: center;
-  position: relative;
+  position: abs;
+  justify-content: center;
+}
+
+.imageUser2 {
+  width: 300px;
+  height: 290px;
+  align-items: center;
+  position: abs;
+  justify-content: center;
+}
+
+.imageUser3 {
+  width: 300px;
+  height: 290px;
+  align-items: center;
+  position: abs;
   justify-content: center;
 }
 
@@ -152,7 +177,7 @@ background: url() no-repeat center center fixed;
 }
 
 .icons {
-  width: 400px;
+  width: 200px;
   height: 125px;
   position: absolute;
   left: 68%;
@@ -360,6 +385,22 @@ nav a:hover {
   /* width: 320px; */
   margin: 10px;
   /* height: ; */
+  position: absolute;
+  top: 98%;
+  left: 8%;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentForm {
+  margin: 10px;
+  position: absolute;
+  top: 72%;
+  left: 8%;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
 .allCards {
@@ -383,6 +424,28 @@ nav a:hover {
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+  /* height: 300px;
+  position: relative; */
+}
+
+.card-body2 {
+  padding: 2.5%;
+  font-size: 1.4rem;
+  height: 300px;
+  position: relative; 
+}
+
+.card-body3 {
+  position: absolute;
+  top: 10%;
+}
+
+.centerWord {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #cadbda;
+  padding-top: 10px;
 }
 
 /* FORM */

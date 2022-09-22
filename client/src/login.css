@@ -85,6 +85,8 @@ nav a {
   transition: all 0.2s;
 }
 
+
+
 nav a:hover {
   color: var(--secondary);
   background-color: var(--dark);
@@ -128,11 +130,16 @@ nav a:hover {
 
 /* CARDS */
 .card {
-  margin: 0 0 20px 0;
+  /* margin: 0 0 20px 0; */
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   background-color: var(--light);
   color: var(--dark);
+  width: 320px;
+  margin: 10px;
+  /* height: ; */
+
+
 }
 
 .card-header {
@@ -147,6 +154,8 @@ nav a:hover {
   padding: 2.5%;
   font-size: 1.4rem;
 }
+
+
 
 /* FORM */
 .form-label,

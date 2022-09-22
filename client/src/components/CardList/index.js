@@ -24,10 +24,10 @@ const CardList = ({ cards, title }) => {
               </Link>{' '}
               {/* thought on {card.createdAt} */}
             </p>
-            <div className="card-body">
+            <div className="card-body2">
               {/* <Link to={`/card/${card._id}`}> */}
-              <div className='imageProfile'>
-                <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
+              <div className='imageProfile2'>
+                <p><img className="imageUser2" src={card.image} alt="usersImage" /></p>
               </div>
             
 
