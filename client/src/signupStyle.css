@@ -177,7 +177,7 @@ nav a:hover {
 }
 
 .signHeader {
-  color: rgb(0, 78, 247);
+  color: rgb(38, 179, 245);
   margin: 0;
   background-color: 'rgba(52, 52, 52, 0.8)';
   padding: 0.625rem;
@@ -222,7 +222,7 @@ nav a:hover {
 }
 
 .loginform-input {
-  width: 30%;
+  width: 100%;
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
@@ -232,7 +232,7 @@ nav a:hover {
 }
 
 .form-input {
-  width: 30%;
+  width: 100%;
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
