@@ -9,7 +9,7 @@ const CardList = ({ cards, title }) => {
   }
 
   return (
-    <div>
+    <div className='allCards'>
       <h3>{title}</h3>
       {cards &&
         cards.map(card => (
@@ -26,10 +26,10 @@ const CardList = ({ cards, title }) => {
             </p>
             <div className="card-body">
               {/* <Link to={`/card/${card._id}`}> */}
-                <p>{card.image}</p>
-                <p>{card.linkedIn}</p>
-                <p>{card.facebook}</p>
-                <p>{card.gitHub}</p>
+              <div className='imageProfile'>
+                <p><img className="imageUser" src={card.image} alt="usersImage" /></p>
+              </div>
+            
 
 
               {/* </Link> */}

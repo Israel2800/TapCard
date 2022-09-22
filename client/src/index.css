@@ -73,6 +73,87 @@ background: url() no-repeat center center fixed;
 
 }
 
+
+
+.imageProfile {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #dbe4ed;
+
+
+}
+
+.imageUser {
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.majorText {
+  display: flex;
+  width: 300px;
+  padding: 50px;
+  position: absolute;
+  right: 12%;
+  top: 80px;
+}
+
+
+.userDescription {
+  width:34%;
+  height: 250px;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  left: 30%;
+  top: 19%;
+  margin: 5%;
+  padding: 10px;
+  border: 3px solid #dbe4ed;
+}
+
+.icons {
+  width: 400px;
+  height: 125px;
+  position: absolute;
+  right: 2%;
+  top: 270px;
+  margin: 2%;
+  padding: 20px;
+
+}
+
+.icon-size {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin: 2%;
+}
+
+/* Footer section */
+
+.footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #1f3431;
+    color: #acb8b8;
+    text-align: center;
+}
+
+.headerSticky {
+  
+}
+
 html,
 body {
   min-height: 100%;
@@ -223,11 +304,37 @@ nav a:hover {
 }
 /* CARDS */
 .card {
-  margin: 0 0 20px 0;
+  /* margin: 0 0 20px 0; */
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   background-color: var(--light);
   color: var(--dark);
+  width: 320px;
+  margin: 10px;
+  /* height: ; */
+  
+
+}
+
+.cardComment {
+  /* margin: 0 0 20px 0; */
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  background-color: var(--light);
+  color: var(--dark);
+  /* width: 320px; */
+  margin: 10px;
+  /* height: ; */
+}
+
+.allCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-header {
