@@ -5,9 +5,6 @@ html {
 background-size: cover;
 }
 
-.home-bg {
-background: url(./images/home-background.mp4) no-repeat center center fixed;
-}
 .signup-bg {
 background: url(./images/signupbg.jpg) no-repeat center center fixed;
 }
@@ -84,6 +81,7 @@ h2 {
 }
 
 h3 {
+  color: rgb(22, 243, 225);
   font-size: 1.75rem;
 }
 
@@ -268,17 +266,6 @@ nav a:hover {
   transform: scale(1);
 }
 
-/* LAYOUT */
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-fluid {
-  width: 92%;
-}
 
 /* DISPLAY */
 .display-none {
