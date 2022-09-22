@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
 import '../index.css'
+import '../signupStyle.css'
 import { QUERY_CARDS, QUERY_ME_BASIC } from '../utils/queries';
 
 const Home = () => {
@@ -16,7 +17,12 @@ const loggedIn = Auth.loggedIn();
 
   return (
       <div className='home'>
-        <div className="">
+        <div className="flex-row justify-space-between">
+            {loggedIn && (
+            <div className="col-12 mb-3">
+                Welcome to TapCard
+            </div>
+            )}
 
             <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
             {loading ? (

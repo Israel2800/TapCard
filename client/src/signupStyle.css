@@ -8,10 +8,6 @@ background-size: cover;
 .signup-bg {
 background: url(./images/signupbg.jpg) no-repeat center center fixed;
 }
-.login-bg {
-background: url() no-repeat center center fixed;
-}
-
 
 .signDiv {
   --primary: #551ce7;
@@ -27,10 +23,6 @@ background: url() no-repeat center center fixed;
   --spacing-three: 1rem;
   --spacing-four: calc(1rem * 1.5);
   --spacing-five: calc(1rem * 3);
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .bc-image {

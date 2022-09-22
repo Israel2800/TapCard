@@ -5,6 +5,7 @@ import { Navigate, useParams } from 'react-router-dom';
 
 import CardForm from '../components/CardForm';
 import CardList from '../components/CardList';
+import '../index.css'
 
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -50,7 +51,7 @@ const MyCard = (props) => {
 //   };
 
   return (
-    <div>
+    <div className='mycard'>
       <div className="flex-row mb-3">
         <h2 className=" text-secondary p-3 display-inline-block">
           Edit {userParam ? `${user.username}'s` : 'your'} Card!
