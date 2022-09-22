@@ -69,13 +69,13 @@ This application is covered by the MIT license.
 
 ## Contributing
 
-- Israel Aguilar
+- [Israel2800](https://github.com/israel2800)
 
-- Shuai Zuo
+- [Shuai Zuo](https://github.com/zwind66)
 
-- Dac Broussard
+- [Dac Broussard](https://github.com/Wompa-Stompa)
 
-- Jessica Hoffman
+- [Jessica Hoffman](https://github.com/SidheLore)
 
 ## Technologies
 
