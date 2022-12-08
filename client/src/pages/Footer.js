@@ -27,7 +27,7 @@ const Footer = () => {
             >
                 🧠
             </span>{' '}
-            by Group 7
+            by TapCard
             </h4>
         
       </div>
