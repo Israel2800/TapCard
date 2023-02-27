@@ -34,6 +34,8 @@ const CardList = ({ cards, title }) => {
 
               {/* </Link> */}
             </div>
+            
+            {/* Use code below for future reference */}
             {/* {card.commentCount > 0 && (
               <CommentList comments={card.comments} />
             )}
